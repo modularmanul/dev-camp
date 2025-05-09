@@ -111,7 +111,7 @@ header {
 }
 
 a:active {
-  color: inherit;
+  color: initial;
 }
 
 .navbar {
