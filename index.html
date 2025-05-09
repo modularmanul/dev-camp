@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A free, open-source web development curriculum for self-learners. Learn full-stack development through interactive lessons, real-world projects, and a global community of developers."
+    />
+    <meta
+      name="keywords"
+      content="Dev bootcamp, web development, full-stack curriculum,
+    open-source learning"
+    />
+    <title>Dev Camp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          id="logo"
+          width="128"
+          height="128"
+          src="https://img.icons8.com/?size=100&id=KJ3jdaYJOYCH&format=png&color=000000"
+          alt="Dev Camp Logo"
+        /><span id="logo-text">Dev Camp</span>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link" href="#introduction-section">Introduction</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#curriculum-section">Curriculum</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#key-features-section">Key Features</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#sign-up-section">Sign Up</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="hero-section" aria-labelledby="hero-heading">
+        <div class="left">
+          <h1 id="hero-heading">
+            A free, open-source curriculum built to help anyone learn full-stack
+            web development from scratch.
+          </h1>
+          <p id="hero-subheading">
+            Whether you're a complete beginner or looking to sharpen your
+            skills, this self-paced program guides you through the fundamentals
+            of web development—one project at a time.
+          </p>
+        </div>
+        <figure id="hero-image-container" class="right">
+          <img
+            id="hero-image"
+            src="https://plus.unsplash.com/premium_vector-1734604442730-be00d68dea38?q=80&w=3600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Logo of Dev Camp"
+          />
+          <figcaption id="hero-image-caption"></figcaption>
+        </figure>
+      </section>
+      <a href="#introduction-section" id="skip-link"></a>
+      <section id="introduction-section" aria-labelledby="introduction-heading">
+        <h2 id="introduction-heading" class="section-heading">Introduction</h2>
+        <p class="section-description">
+          This platform is built by a global community of contributors who
+          believe in accessible and effective tech education. It empowers
+          self-learners to become skilled web developers while promoting a
+          culture of collaboration, mentorship, and lifelong learning.
+        </p>
+
+        <dl id="introduction-details">
+          <div id="introduction-details-list">
+            <dt>Creator</dt>
+            <dd>
+              <a href="https://example.com" target="_blank" id="founder-link"
+                >The Founder</a
+              >
+            </dd>
+            <dt>Launched</dt>
+            <dd>2025</dd>
+            <dt>Vision</dt>
+            <dd>
+              To make high-quality web development education universally
+              accessible.
+            </dd>
+          </div>
+          <aside id="introduction-details-summary">
+            <dt>Summary</dt>
+            <dd>
+              An open-access curriculum designed for <em>aspiring</em> web
+              developers, providing a guided path through interactive lessons,
+              real-world projects, and community-driven support. Learners can
+              progress at their own pace and gain practical, job-ready skills.
+            </dd>
+          </aside>
+        </dl>
+      </section>
+
+      <section id="curriculum-section" aria-labelledby="curriculum-heading">
+        <h2 id="curriculum-heading" class="section-heading">Curriculum</h2>
+        <p class="section-description">
+          The curriculum offers a well-rounded education in web development,
+          covering both client-side and server-side technologies. It is
+          structured into distinct learning tracks:
+        </p>
+        <div class="curriculum-path-container">
+          <article class="curriculum-path">
+            <h3 class="curriculum-path-title">Foundations</h3>
+            <ul class="curriculum-path-description">
+              <li>
+                Introduction to core web technologies and development practices.
+              </li>
+              <li>
+                Includes HTML, CSS, JavaScript, Git, and the command line.
+              </li>
+              <li>
+                Prepares learners for advanced specialization in full-stack
+                development.
+              </li>
+            </ul>
+          </article>
+
+          <article class="curriculum-path">
+            <h3 class="curriculum-path-title">
+              Full Stack with Python & Django
+            </h3>
+            <ul class="curriculum-path-description">
+              <li>
+                Focuses on full-stack web development using Python and Django.
+              </li>
+              <li>
+                Teaches database management, RESTful APIs, authentication, and
+                deployment.
+              </li>
+              <li>
+                Builds scalable and secure applications with real-world use
+                cases.
+              </li>
+            </ul>
+          </article>
+
+          <article class="curriculum-path">
+            <h3 class="curriculum-path-title">Full Stack with JavaScript</h3>
+            <ul class="curriculum-path-description">
+              <li>
+                Centered on modern JavaScript development from front-end to
+                back-end.
+              </li>
+              <li>
+                Uses frameworks and tools such as React, Node.js, Express, and
+                MongoDB.
+              </li>
+              <li>
+                Equips learners with skills to develop responsive, data-driven
+                web apps.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="key-features-section" aria-labelledby="key-features-heading">
+        <h2 id="key-features-heading" class="section-heading">Key Features</h2>
+        <p class="section-description">
+          This learning platform offers a range of features designed to support
+          and enhance your journey into web development:
+        </p>
+        <ul id="key-features-list">
+          <li class="key-features-item">
+            <h3 class="key-features-title">Open and Free</h3>
+            <p class="key-features-text">
+              All learning resources are completely free to use—no signups,
+              subscriptions, or paywalls. Whether you're just exploring or fully
+              committed, you have unlimited access to the entire curriculum.
+            </p>
+          </li>
+          <li class="key-features-item">
+            <h3 class="key-features-title">Collaborative Learning</h3>
+            <p class="key-features-text">
+              Connect with a vibrant community of learners, mentors, and
+              contributors. Share your progress, ask questions, get feedback,
+              and build relationships that support your growth as a developer.
+            </p>
+          </li>
+          <li class="key-features-item">
+            <h3 class="key-features-title">Project-Based Curriculum</h3>
+            <p class="key-features-text">
+              Theory is paired with hands-on practice through meaningful,
+              real-world projects. Build everything from simple landing pages to
+              dynamic full-stack applications as you progress through the
+              lessons.
+            </p>
+          </li>
+          <li class="key-features-item">
+            <h3 class="key-features-title">Career-Oriented Path</h3>
+            <p class="key-features-text">
+              The curriculum is designed with real job skills in mind—covering
+              everything from version control and testing to frameworks, APIs,
+              and deployment—helping you build a portfolio that stands out to
+              employers.
+            </p>
+          </li>
+          <li class="key-features-item">
+            <h3 class="key-features-title">Learn at Your Own Pace</h3>
+            <p class="key-features-text">
+              The curriculum is fully self-paced, allowing you to learn whenever
+              and wherever it suits you. Whether you're studying full-time or
+              squeezing in lessons after work, you're in control of your
+              journey.
+            </p>
+          </li>
+          <li class="key-features-item">
+            <h3 class="key-features-title">Modern Tech Stack</h3>
+            <p class="key-features-text">
+              Learn using up-to-date tools and frameworks used by professional
+              developers today. From React and Node.js to Git and APIs, you’ll
+              gain practical experience with the technologies companies actually
+              use.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <blockquote id="quote-section" cite="https://example.com">
+        <p id="quote">
+          <b>Dev Camp</b>
+          is one of those
+          <em>I wish I had this when I started</em> resources. Not everyone has
+          access to formal education or the time and money for bootcamps—and
+          that’s okay. This platform was created to bridge the gap for
+          self-taught developers who are enthusiastic in building a strong
+          foundation and seeking a high-quality, accessible path into tech.
+        </p>
+        <cite>—The Founder</cite>
+      </blockquote>
+      <section id="sign-up-section">
+        <div class="sign-up-container">
+          <h2 id="sign-up-heading" class="section-heading">
+            Join the Camp and Start Learning!
+          </h2>
+          <p class="sign-up-description">
+            Sign up to track your progress, connect with other learners, and get
+            the most out of your web development journey. It’s free,
+            beginner-friendly, and open to everyone—no experience required.
+          </p>
+          <button class="sign-up-button" type="button">Sign Up</button>
+          <p>
+            Are you an existing learner? → Give a
+            <a id="feedback-link" href="feedback.html" target="_blank"
+              >feedback</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>© Modular Manul - Dev Camp</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,790 @@
+:root {
+  --light-violet: #b587f1;
+  --dark-violet: #8016b1;
+  --light-blue: #96c6e2;
+  --dark-blue: #3b576c;
+  --shadow: #e0dfdf;
+
+  --semi-transparent-white: rgba(255, 255, 255, 0.5);
+  --shadow-color-1: rgba(0, 0, 0, 0.5);
+
+  --star-color-0: #e1e1e1;
+  --star-color-1: #ffcc00;
+  --star-color-2: #ff9900;
+  --star-color-3: #634903;
+
+  --gray: #a5a5a5;
+  --lightgray: #d9d9d9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  /* min-width: 300px; */
+  max-width: max(980px, 50%);
+  font-size: 1.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-description {
+  margin-bottom: 3rem;
+}
+
+#introduction-section,
+#curriculum-section,
+#key-features-section,
+#quote-section,
+#sign-up-section,
+#feedback-section {
+  width: 100%;
+  min-height: 50rem;
+  margin: 3rem 0;
+  padding: 2rem;
+}
+#introduction-details,
+.curriculum-path {
+  margin: 0 1.5rem;
+}
+
+#curriculum-section,
+#key-features-section {
+  box-shadow: 0 0 1.5rem 0.2rem var(--shadow);
+  background: linear-gradient(white 50%, var(--light-blue), var(--dark-blue));
+}
+
+/* Header */
+header {
+  width: 100%;
+  top: 0;
+  position: sticky;
+  background-color: rgba(255, 255, 255, 0.502);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  z-index: 1;
+}
+
+#logo {
+  width: auto;
+  height: 7rem;
+}
+#logo-text {
+  font-size: 3.2rem;
+}
+
+.navbar {
+  flex: auto;
+  align-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.user-agreement-link {
+  color: var(--dark-violet);
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  text-align: right;
+  float: right;
+  font-size: 2rem;
+}
+
+.nav-link:hover {
+  color: var(--light-violet);
+  text-decoration: underline var(--light-violet);
+  text-underline-offset: 1rem;
+}
+
+/* Hero Section */
+
+#hero-section {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  /* padding: 5rem; */
+}
+
+#hero-section .left {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+#hero-heading {
+  font-family: 'Limelight', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.2rem;
+}
+
+#hero-subheading {
+  font-size: 2rem;
+}
+
+#hero-image-container {
+  flex: 1;
+  align-self: center;
+}
+#hero-image {
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#skip-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  z-index: 1;
+}
+
+#skip-link::before {
+  content: '';
+  width: 7rem;
+  height: 7rem;
+  display: block;
+  background-size: 7rem;
+  background-image: url(https://img.icons8.com/?size=100&id=2GTsHjAHII4w&format=png&color=000000);
+  background-repeat: no-repeat;
+}
+
+#skip-link:hover {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+/* Introduction Section */
+
+#introduction-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#founder-link {
+  color: var(--light-violet);
+  text-decoration: underline var(--light-violet);
+  text-underline-offset: 1rem;
+  transition: font-size 0.5s ease;
+}
+
+#founder-link:hover {
+  font-size: larger;
+}
+
+dt {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+dd {
+  margin: 2rem 0 2rem 1.5rem;
+  max-width: 35ch;
+  overflow-wrap: break-word;
+  line-height: 1.6;
+}
+
+#introduction-details-summary {
+  width: 50%;
+  float: right;
+  margin-left: 2rem;
+}
+
+/* Curriculum Overview Section */
+.curriculum-path-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.curriculum-path {
+  background-color: white;
+  box-shadow: 0 0 1.5rem 0.2rem var(--shadow);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.curriculum-path-title {
+  border-bottom: 0.2rem solid var(--light-violet);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.curriculum-path-description {
+  list-style: none;
+}
+.curriculum-path-description li {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.curriculum-path-description li::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+  background-image: url(https://img.icons8.com/?size=100&id=11695&format=png&color=000000);
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+/* Key Features Section */
+#key-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 2rem;
+}
+
+.key-features-item {
+  width: 30rem;
+  min-height: 20rem;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 0 1.5rem 0.2rem var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  gap: 2rem;
+  word-break: break-word;
+}
+
+.key-features-title {
+  color: var(--dark-blue);
+  min-height: 3rem;
+  font-weight: bold;
+  border-bottom: 0.2rem solid var(--light-violet);
+  padding-bottom: 1rem;
+}
+.key-features-text {
+  flex: auto;
+}
+
+/* Quote Section  */
+#quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--shadow);
+  font-size: 2.4rem;
+  gap: 2rem;
+}
+
+cite {
+  font-weight: 700;
+}
+#quote {
+  width: 50%;
+  text-align: justify;
+}
+
+#quote p:nth-child(1) {
+  text-indent: 1.5rem;
+  margin: 0 2rem;
+}
+
+#quote p:nth-child(1)::before {
+  font-size: 2rem;
+  font-weight: bold;
+  content: '\201C';
+  color: #8b4513;
+}
+
+#quote p:nth-child(1)::after {
+  font-size: 2rem;
+  font-weight: bold;
+  content: '\201D';
+  color: #8b4513;
+}
+
+/* Sign Up Section */
+#sign-up-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-container {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 8rem;
+  border: dashed 1rem white;
+  background-color: var(--dark-blue);
+  color: white;
+}
+.sign-up-heading {
+  flex-shrink: 0;
+}
+.sign-up-description {
+  width: 85%;
+  flex: auto;
+  margin-bottom: 2rem;
+}
+.sign-up-button {
+  width: 100px;
+  height: 5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  align-self: flex-end;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: 0.2rem solid white;
+  transition: transform 1s ease, color 1s ease, background-color 1s ease;
+}
+.sign-up-button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: var(--dark-violet);
+}
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+#feedback-link {
+  color: white;
+}
+
+#feedback-link:hover {
+  color: var(--light-violet);
+  text-decoration: underline var(--light-violet);
+}
+
+/* Feedback */
+
+#feedback-section {
+  margin: 2rem auto;
+  padding: 0 2rem;
+  min-width: 48rem;
+  max-width: 98rem;
+  color: black;
+  font-size: 1.6rem;
+}
+
+#feedback-heading {
+  font: bold 4rem 'Boldonse', system-ui;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--shadow-color-1);
+  text-decoration-line: underline;
+  text-decoration-color: var(--light-blue);
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.3rem;
+  text-underline-offset: 0.5rem;
+}
+
+#description {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Creates a radial gradient transitioning from secondary color to primary colors,
+     giving a smooth and visually appealing background effect */
+#feedback-container {
+  padding: 1.5rem 3rem;
+  background: radial-gradient(
+    circle at left center,
+    var(--shadow) 5%,
+    var(--light-blue) 50%,
+    var(--shadow) 70%,
+    var(--dark-blue)
+  );
+  border-radius: 2.4rem;
+  box-shadow: 0 0 1rem var(--shadow-color-1);
+  backdrop-filter: blur(0.5rem);
+  border: 1rem double white;
+}
+
+/* Form styles */
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--semi-transparent-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 4rem 0;
+}
+
+strong {
+  display: block;
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 2rem 0;
+  color: var(--dark-violet);
+}
+
+fieldset {
+  border: none;
+  margin: 2rem 0;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: bold;
+  gap: 0.5rem;
+  margin: 1.6rem 0;
+}
+
+.block.inline {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+select,
+#review-details-textarea {
+  width: 35rem;
+  padding: 1rem;
+  font-family: 'Antic', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  outline: none;
+  border: 0.1rem solid var(--gray);
+  border-radius: 0.5rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+select,
+#review-details-textarea::placeholder {
+  font-size: 1.6rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+select {
+  width: 20rem;
+}
+
+input[type='number'] {
+  width: 10rem;
+}
+
+input:focus,
+#review-details-textarea:focus {
+  outline: none;
+}
+
+#review-details-textarea {
+  display: block;
+  min-width: 50rem;
+  min-height: 15rem;
+  margin: 1rem 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Country dropdown list */
+.dropdown-content {
+  background: white;
+  max-height: 20rem;
+  overflow-y: auto;
+  display: none;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0.5rem 0.5rem var(--shadow-color-1);
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 1rem;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  background: var(--lightgray);
+}
+
+/* Custom checkbox */
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox'] + .custom-checkbox {
+  background: var(--transparent-color-1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem var(--shadow-color-1);
+}
+input[type='checkbox']:checked + .custom-checkbox {
+  background: var(--dark-blue);
+}
+input[type='checkbox'] + .custom-checkbox:hover {
+  box-shadow: 0 0 1rem var(--dark-blue);
+}
+input[type='checkbox']:checked + .custom-checkbox:active {
+  background: var(--dark-violet);
+}
+
+.custom-checkbox {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 1rem 0 0;
+  vertical-align: middle;
+}
+
+.custom-checkbox::after {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light-blue);
+  font-size: 1.6rem;
+  display: none;
+}
+
+input[type='checkbox']:checked + .custom-checkbox::after {
+  display: block;
+}
+
+/* Divider */
+hr {
+  height: 0.5rem;
+  margin: 1.5rem 0;
+  background: var(--transparent-color-1);
+  border: none;
+}
+
+/* Rating star */
+.rate {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rate input {
+  display: none;
+}
+
+/* Rotates the stars initially */
+.rate label {
+  font-size: 8rem;
+  color: var(--star-color-0);
+  cursor: pointer;
+  transform-origin: center;
+  transform: rotateZ(-200deg);
+  transition: transform 0.5s ease-out, color 0.5s ease-out;
+}
+
+/* Stars become colorful when selected */
+.rate input:checked ~ label {
+  background: radial-gradient(
+    circle at center,
+    var(--star-color-1) 10%,
+    var(--star-color-2) 30%,
+    var(--star-color-3) 80%,
+    var(--star-color-3)
+  );
+  background-clip: text;
+  color: transparent;
+  transform: rotateZ(0deg);
+}
+
+/* Hover effect: Rotates stars upright */
+.rate label:hover,
+.rate label:hover ~ label {
+  color: var(--star-color-1) !important;
+  transform: rotateZ(0deg);
+}
+
+/* User agreement */
+.user-agreement-link:hover {
+  color: var(--light-violet);
+}
+
+#user-agreement p {
+  font-size: 1.2rem;
+  color: var(--dark-violet);
+  margin: 1rem 0;
+}
+
+/* Submit button */
+.feedback-button {
+  width: 20rem;
+  margin-top: 4rem;
+  padding: 1rem 1.5rem;
+  background: var(--dark-blue);
+  align-self: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: 0.2rem solid white;
+  transition: transform 1s ease, color 1s ease, background-color 1s ease;
+}
+.feedback-button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: var(--dark-violet);
+}
+/* Footer */
+footer {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--light-blue);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  body,
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='tel'],
+  select,
+  #review-details-textarea::placeholder {
+    font-size: 1.4rem;
+  }
+
+  #feedback-heading {
+    font-size: 2.8rem;
+  }
+
+  strong {
+    font-size: 1.6rem;
+  }
+
+  legend {
+    font-size: 1.8rem;
+  }
+
+  .user-agreement p {
+    font-size: 1rem;
+  }
+
+  #description,
+  footer {
+    font-size: 1.2rem;
+  }
+
+  .rate label {
+    font-size: 6rem;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'] {
+    width: 22rem;
+  }
+
+  select {
+    width: 20rem;
+  }
+
+  #review-details-textarea {
+    min-width: 32rem;
+  }
+
+  .custom-checkbox {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .custom-checkbox::after {
+    font-size: 1.4rem;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

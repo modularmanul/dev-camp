@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A free, open-source web development curriculum for self-learners. Learn full-stack development through interactive lessons, real-world projects, and a global community of developers."
+    />
+    <meta
+      name="keywords"
+      content="Dev bootcamp, web development, full-stack curriculum,
+    open-source learning"
+    />
+    <title>Dev Camp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          id="logo"
+          width="128"
+          height="128"
+          src="https://img.icons8.com/?size=100&id=KJ3jdaYJOYCH&format=png&color=000000"
+          alt="Dev Camp Logo"
+        /><span id="logo-text">Dev Camp</span>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link" href="#introduction-section">Introduction</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#curriculum-section">Curriculum</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#key-features-section">Key Features</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#sign-up-section">Sign Up</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="feedback-section">
+        <div id="feedback-container">
+          <h2 id="feedback-heading" class="section-heading">
+            Dev Camp Feedback
+          </h2>
+          <p id="description">
+            We’re always looking to improve Dev Camp and make it the best
+            possible experience for all learners. Your feedback helps us shape a
+            more effective, engaging, and rewarding curriculum. Please take a
+            moment to share your thoughts about your time with Dev Camp.
+            <br />
+            <strong>Your voice helps us grow. Thank you!</strong>
+          </p>
+          <hr />
+          <form id="survey-form" method="post" action="#">
+            <fieldset id="user-information">
+              <legend class="sr-only">Your Information</legend>
+              <label class="block" id="name-label" for="name"
+                >Name <input type="text" name="name" id="name" required
+              /></label>
+              <label class="block" id="email-label" for="email"
+                >Email <input type="email" name="email" id="email" required
+              /></label>
+              <label class="block" id="number-label" for="age"
+                >Age
+                <input
+                  type="number"
+                  name="age"
+                  id="age"
+                  min="13"
+                  max="120"
+                  required
+              /></label>
+              <label class="block" for="gender"
+                >Gender
+                <select name="gender" id="gender">
+                  <option value="">Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="non-binary">Non-binary</option>
+                  <option value="prefer-not-to-say">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </select></label
+              >
+              <label class="block" id="phone-label" for="phone"
+                >Phone
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+1 (777) 777-7777"
+                  required
+              /></label>
+              <label class="block" id="search-label" for="search-input"
+                >Country</label
+              >
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Type to search..."
+                onkeyup="filterDropdown()"
+                onclick="showDropdown()"
+                aria-labelledby="search-label"
+                aria-controls="dropdown-list"
+                aria-expanded="false"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-haspopup="listbox"
+              />
+              <div class="dropdown-content" id="dropdown-list" role="listbox">
+                <!-- Options will be added dynamically -->
+              </div>
+            </fieldset>
+            <fieldset id="improvement-areas">
+              <legend>What areas of Dev Camp can we improve?</legend>
+              <label class="block inline" for="curriculum-structure">
+                <input
+                  type="checkbox"
+                  id="curriculum-structure"
+                  name="improvement-area"
+                  value="curriculum-structure"
+                  checked
+                />
+                <div class="custom-checkbox"></div>
+                Curriculum Structure
+              </label>
+              <label class="block inline" for="teaching-materials">
+                <input
+                  type="checkbox"
+                  id="teaching-materials"
+                  name="improvement-area"
+                  value="teaching-materials"
+                />
+                <div class="custom-checkbox"></div>
+                Learning Materials
+              </label>
+              <label class="block inline" for="project-quality">
+                <input
+                  type="checkbox"
+                  id="project-quality"
+                  name="improvement-area"
+                  value="project-quality"
+                />
+                <div class="custom-checkbox"></div>
+                Project Assignments
+              </label>
+              <label class="block inline" for="mentor-support">
+                <input
+                  type="checkbox"
+                  id="mentor-support"
+                  name="improvement-area"
+                  value="mentor-support"
+                />
+                <div class="custom-checkbox"></div>
+                Mentor Support
+              </label>
+              <label class="block inline" for="community-engagement">
+                <input
+                  type="checkbox"
+                  id="community-engagement"
+                  name="improvement-area"
+                  value="community-engagement"
+                />
+                <div class="custom-checkbox"></div>
+                Community Engagement
+              </label>
+              <label class="block inline" for="platform-experience">
+                <input
+                  type="checkbox"
+                  id="platform-experience"
+                  name="improvement-area"
+                  value="platform-experience"
+                />
+                <div class="custom-checkbox"></div>
+                Learning Platform UX
+              </label>
+              <label class="block inline" for="career-guidance">
+                <input
+                  type="checkbox"
+                  id="career-guidance"
+                  name="improvement-area"
+                  value="career-guidance"
+                />
+                <div class="custom-checkbox"></div>
+                Career Guidance
+              </label>
+              <div class="block inline">
+                <label for="other">
+                  <input
+                    type="checkbox"
+                    id="other"
+                    name="improvement-area"
+                    value="other"
+                  />
+                  <div class="custom-checkbox"></div>
+                  Other:
+                </label>
+                <label for="other-detail">
+                  <input
+                    type="text"
+                    id="other-detail"
+                    name="improvement-area"
+                    placeholder="Specify here"
+                  />
+                </label>
+              </div>
+            </fieldset>
+            <fieldset id="review-details" class="block">
+              <legend>How would you rate your Dev Camp experience?</legend>
+              <div class="rate">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5" aria-label="5 stars">★</label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4" aria-label="4 stars">★</label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3" aria-label="3 stars">★</label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2" aria-label="2 stars">★</label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1" aria-label="1 star">★</label>
+              </div>
+              <label for="review-details-textarea">
+                Additional comments:
+                <textarea
+                  id="review-details-textarea"
+                  placeholder="Tell us what worked, what didn’t, and how we can improve."
+                ></textarea>
+              </label>
+            </fieldset>
+            <fieldset id="user-agreement">
+              <legend class="sr-only">Dev Camp Terms and Privacy</legend>
+              <p>
+                Your feedback is anonymous and confidential unless you choose to
+                share your contact details.
+                <br />
+                We never share your personal information with third parties.
+                <br />
+                By submitting, you agree to our
+                <a href="#" target="_blank" class="user-agreement-link"
+                  >Terms of Service</a
+                >
+                and
+                <a href="#" target="_blank" class="user-agreement-link"
+                  >Privacy Policy</a
+                >.
+              </p>
+              <label class="block inline" for="terms-and-conditions">
+                <input
+                  type="checkbox"
+                  id="terms-and-conditions"
+                  name="terms-and-conditions"
+                  value="terms-and-conditions"
+                  required
+                />
+                <div class="custom-checkbox"></div>
+                I accept the terms and conditions.</label
+              >
+              <label class="block inline" for="privacy-policy">
+                <input
+                  type="checkbox"
+                  id="privacy-policy"
+                  name="privacy-policy"
+                  value="privacy-policy"
+                  required
+                />
+                <div class="custom-checkbox"></div>
+                I agree to the privacy policy.</label
+              >
+            </fieldset>
+            <button type="submit" class="feedback-button">
+              Submit Feedback
+            </button>
+          </form>
+          <hr />
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>© Modular Manul - Dev Camp</p>
+    </footer>
+  </body>
+</html>
