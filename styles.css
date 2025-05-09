@@ -392,6 +392,7 @@ cite {
   border-radius: 2rem;
   border: 0.2rem solid white;
   transition: transform 1s ease, color 1s ease, background-color 1s ease;
+  margin-bottom: 2rem;
 }
 .sign-up-button:hover {
   transform: scale(1.1);
