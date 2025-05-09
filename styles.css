@@ -98,8 +98,20 @@ header {
   width: auto;
   height: 7rem;
 }
+
 #logo-text {
   font-size: 3.2rem;
+}
+
+#home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
 }
 
 .navbar {
